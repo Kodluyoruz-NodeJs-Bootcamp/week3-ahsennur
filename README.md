@@ -3,7 +3,7 @@
 ## A user can register with userName, password, name, surname and can login with userName and password.
 ## Must have MongoDB in your local.
 ## USES: 
-# express-session, jsonwebtoken
+ express-session, jsonwebtoken
 ## RUN:
 ```properties
 npm i
