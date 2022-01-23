@@ -14,7 +14,7 @@ const app = express()
 const publicDirectoryPath = path.join(__dirname, './public')
 const port : number|string = process.env.PORT || 3000
 
-const db  = () : Promise<void>=> { //TODO Promise<>?
+const db  = () : Promise<void>=> { 
     return mongoose.connect('mongodb://127.0.0.1:27017/authdb'
     // ,
     // {
@@ -25,6 +25,7 @@ const db  = () : Promise<void>=> { //TODO Promise<>?
     })
 }
 
+//set app
 app.use(express.static(publicDirectoryPath))
 
 app.use(bodyParser.json())
@@ -48,6 +49,7 @@ app.use(session ({
 app.use(authrouter)
 app.use(usersrouter)
 
+//listen
 db().then(() => {
     app.listen(port, () => {
         console.log(`Server is up on port ${port}`)

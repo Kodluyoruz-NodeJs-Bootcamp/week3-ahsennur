@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema;
 
+//user schema definition
 const userSchema = new Schema({
     name: {
         type: String,
@@ -26,7 +27,7 @@ const userSchema = new Schema({
     }
 })
 
-
+//type for user
 export interface IUser extends mongoose.Document {
     _id: string;
     name: string; 

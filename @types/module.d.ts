@@ -3,6 +3,7 @@ import express from "express"
 
 import session from 'express-session';
 
+//types defined
 declare module 'express-session' {
   export interface SessionData {
     user: string;
@@ -16,8 +17,3 @@ declare module "express-serve-static-core" {
     userId: string| undefined;
   }
 }
-
-// declare module 'jsonwebtoken'
-//   export interface JwtPayload {
-//     _id: string
-//   }

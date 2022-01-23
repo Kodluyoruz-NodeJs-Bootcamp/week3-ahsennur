@@ -10,7 +10,7 @@ export const register : RequestHandler = async (req, res, next) => {
 
     try{
         //create the user to register
-        const user = new User() //TODO  : mongoose.Models (didnt write any type)
+        const user = new User()
         user.name = req.body.name,
         user.surname = req.body.surname,
         user.userName = req.body.userName,
